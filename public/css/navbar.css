@@ -1,0 +1,204 @@
+/* ===== RESET & BASE ===== */
+.custom-navbar {
+    background: linear-gradient(to left, #e5203a, #660f24);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1030;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ===== HAMBURGER ===== */
+.navbar-toggle {
+    background: none;
+    border: none;
+    display: none;          /* akan di-override di media query */
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: .25rem;
+    transition: transform .3s ease;
+}
+
+.navbar-toggle:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggle .bar {
+    width: 24px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+
+/* ===== MENU DESKTOP ===== */
+.navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu a {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .85);
+    font-weight: 500;
+    transition: color .25s ease;
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #ffffff;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar admin */
+.navbar-admin {
+    background: linear-gradient(135deg, #660f24, #2b0013);
+}
+
+.navbar-admin .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Menu di tengah */
+.navbar-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Tombol logout di kanan */
+.logout-btn {
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    transition: color .2s;
+}
+
+.logout-btn:hover {
+    color: #ffc107;
+}
+
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+
+ /* Costum-Navbar1 */
+
+/* Custom Navbar 1 - Modern Purple Theme */
+.costum-navbar1 {
+    background-color: #7e141dff;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.costum-navbar1 .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.costum-navbar1 .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.costum-navbar1 .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+        background: #420b0b91;
+        backdrop-filter: blur(6px) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+        transition: max-height .45s ease, padding .45s ease;
+    }
+
+    .navbar-menu.show {
+        max-height: 480px;
+        padding: 1.25rem 1rem;
+    }
+
+    /* link warna terang di mobile */
+    .navbar-menu a {
+        color: rgba(255, 255, 255, .9);
+        padding: .5rem 0;
+    }
+
+    .costum-navbar1{
+        width: 80%;
+    }
+
+}

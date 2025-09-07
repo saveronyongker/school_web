@@ -1,0 +1,616 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #eeeeeeff!important;
+    -webkit-font-smoothing: antialiased; /* Untuk rendering lebih halus */
+
+    font-family: "Outfit", sans-serif!important;
+}
+
+.header{
+    background-color: #a31621;
+}
+
+.section{
+    min-height: 100dvh;
+    height: auto;
+}
+
+/* From Uiverse.io by milegelu */ 
+.containers{
+  width: 100%;
+  height: 100%;
+
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
+
+.box-area{
+    width: 930px;
+}
+
+.bg-utama{
+    background-color: #ffffff;
+}
+
+.bg-dasar{
+    background-color: #f2f2f2!important;
+}
+
+.bg-gradasi1{
+    background: linear-gradient( #a31621, #e01f2f);
+    background-image: radial-gradient(circle, #e01f2f, transparent 20%, #a31621);
+    background-repeat: no-repeat;
+    background-color: #e01f2f;
+}
+
+.bg-gradasi2{
+    background: linear-gradient( #fce9ea, #f2f2f2);
+}
+
+.bg-gradasi3{
+    background: linear-gradient( #e01f2f, #a31621);
+}
+
+.bg-admin{
+    background: linear-gradient(to right, #2b0013, #660f24);
+}
+
+.bg-kepsek{
+    background: linear-gradient(to right, #ff9408, #ca3f16, #95122c, #100c08);
+}
+
+.bg-piket{
+    background: linear-gradient(to left, #f09410, #bc430d);
+}
+
+.bg-guru{
+    background: linear-gradient(to left, #f24455, #e5203a, #660f24);
+}
+
+.bg-kedua{
+    background-color: #fcf7f8 !important;
+}
+
+.bg-muda{
+    background-color: #e01f2f !important;
+}
+
+.bg-biru{
+    background-color: #a31621 !important;
+}
+
+.glass-dark{
+    background-color: #80808090 !important;
+}
+
+.glass{
+    background-color: #ffffff05 !important;
+    backdrop-filter: blur(7px) !important;
+    -webkit-backdrop-filter: blur(7px) !important;
+    min-height: 100svh; 
+    overflow-y: auto;
+}
+
+.hero-section {
+    background: 
+        linear-gradient(45deg, rgba(70, 0, 0, 0.30)),
+        url('../picture/foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-height: 100svh;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.navbar-bg {
+    background-color: #7e141dff!important;
+}
+
+.bg-navbar-kepsek{
+    background:linear-gradient(to left, #95122c, #ca3f16);
+}
+
+.bg-navbar-guru{
+    background:linear-gradient(to left, #95122c, #660f24);
+}
+
+/*--------------------------------------------*/
+
+/*text-color*/
+
+.text-utama{
+    color: #fcf7f8 !important;
+    transition: color 0.4s ease !important;
+}
+
+.text-kedua{
+    color: #a31621 !important;
+    transition: color 0.4s ease !important;
+}
+
+.text-ketiga{
+    color: #e5203a!important;
+    transition: color 0.4s ease !important;
+}
+
+.text-keempat{
+    color: #701119ff!important;
+    transition: color 0.4s ease !important;
+}
+
+.text-kelima{
+    color: #2b0013;
+    transition: color 0.4s ease !important;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;      /* tambahan: pecah kata panjang di tepi */
+}
+
+.display-custom {
+  font-size: 15rem;     
+}
+
+/*Font*/
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.fira-mono-regular {
+  font-family: "Fira Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-mono-medium {
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fira-mono-bold {
+  font-family: "Fira Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/*button*/
+
+.btn-animated {
+    position: relative!important;
+    padding: 8px 20px!important;
+    background-color:rgba(255, 255, 255, 1)!important; 
+    color: #701119ff!important;
+    border: none!important;
+    border-radius: 5px!important;
+    overflow: hidden!important;
+} 
+
+.btn-animated span {
+    position: relative;
+    z-index: 1;
+} 
+
+.btn-animated:after {
+    content: '';
+    position: absolute!important;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 96, 96, 0.15)!important;
+    transition: all 0.3s ease!important;
+} 
+
+.btn-animated:hover:after {
+    left: 100%!important;
+}
+
+.hover-scale {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)!important;
+    display: inline-block;
+}
+  
+.hover-scale:hover {
+    transform: scale(1.1)!important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-1 {
+  color: #fff!important;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #a31621 !important;
+  border: 1px solid #a31621;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #700f17, -6px -6px 12px #b41825;
+}
+
+.btn-1:active {
+  color: #d8d8d8ff!important;
+  box-shadow: inset 4px 4px 12px #700f17, inset -4px -4px 12px #b41825;
+}
+
+.btn-utama {
+    /* gradien + warna */
+    background: linear-gradient(135deg, #e5203a 0%, #660f24 100%);
+    color: #fff !important;
+    border: none;
+
+    /* dimensi & font */
+    padding: .55rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+
+    /* sudut & bayangan */
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(229, 32, 58, .35);
+    cursor: pointer;
+
+    /* transisi smooth */
+    transition: all .35s ease!important;
+}
+
+.btn-utama:hover {
+    /* gradien lebih gelap */
+    background: linear-gradient(135deg, #bd1b30 0%, #4b0a19 100%);
+    box-shadow: 0 6px 20px rgba(229, 32, 58, .45);
+    transform: translateY(-2px);
+}
+
+.btn-utama:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(229, 32, 58, .35);
+}
+
+/*--------------------------------Input----------------------------------*/
+
+.input-costum {
+    color: #ffffff!important;
+    opacity: 0.7;
+}
+
+.input-costum::placeholder {
+    color: #ffffff!important;   
+    opacity: 0.7;
+}
+
+.input-costum:hover {
+    color: #ffffff; /* Ubah warna teks */
+}
+
+/* --------------------------------Shadow-------------------------------- */
+
+.shadow-costum {
+    box-shadow: 4px 4px 12px #00000010, -4px -4px 12px #00000010;
+}
+
+/* --------------------------------Icon--------------------------------- */
+
+.bi-pencil {
+  color: #0066ff; /* Warna hijau */
+  transition: all 0.3s;
+}
+.bi-pencil:hover {
+  color: #0052cc; /* Warna hover */
+  transform: scale(1.1);
+}
+
+.bi-trash {
+  color: #ff0000; /* Warna hijau */
+  transition: all 0.3s;
+}
+.bi-trash:hover {
+  color: #cc0000; /* Warna hover */
+  transform: scale(1.1);
+}
+
+
+/* --------------------------------Icon--------------------------------- */
+
+
+/*Card*/
+/* From Uiverse.io by Sashank02 */ 
+.card-new {
+  padding: 20px;
+  width: 400px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  box-shadow: 5px 5px 6px #700f17,
+               -5px -5px 6px #b41825;
+  transition: 0.4s;
+}
+
+.card-new:hover {
+  translate: 0 -10px;
+}
+
+.card-title-new {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e54a7;
+  margin: 15px 0 0 10px;
+}
+
+.card-image {
+  min-height: 170px;
+  background-color: #c9c9c9;
+  border-radius: 15px;
+  box-shadow: inset 8px 8px 10px #c3c3c3,
+            inset -8px -8px 10px #cfcfcf;
+}
+
+.card-img-fixed {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body-new {
+  margin: 13px 0 0 10px;
+  color: rgb(31, 31, 31);
+  font-size: 15px;
+}
+
+
+/* --------------------- CARD LIVE -------------------- */
+.card-live {
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    /* box-shadow: 0 4px 20px rgba(0,0,0,.08); */
+    transition: transform .35s ease, box-shadow .35s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* .card-live:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
+} */
+
+/* Header icon + judul */
+.card-live-header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: 1.25rem 1.5rem .75rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 700;
+}
+
+.card-live-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #701119ff;
+    border : 1px solid #701119ff;
+    font-size: 1.1rem;
+}
+
+/* Isi card */
+.card-live-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* Divider animasi */
+.divider-glow {
+    height: 2px;
+    margin: 1rem 0;
+    border-radius: 1px;
+    background: linear-gradient(90deg, transparent, #e5203a, transparent);
+}
+
+/* progress bar (opsi) */
+.progress-mini {
+    height: 4px;
+    background: #f5f5f5;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.progress-mini::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e5203a, #660f24);
+    animation: fillBar 2s ease forwards;
+}
+
+
+
+.actor-card {
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.actor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+.actor-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+}
+
+
+
+.rt {
+  border-radius: 0 0 100%; /* Hanya sudut bawah yang melengkung */
+}
+
+.footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: #636363;
+}
+
+.by-name {
+  font-weight: 700;
+}
+
+.card-login{
+    color: #ffffff;
+}
+
+.card-img-sm{
+    width: auto; 
+    max-width: 500px; 
+    height: auto;
+}
+
+
+/*---------------------------- Tambahan Baru ---------------------------*/
+
+.pt-6{
+    padding-top: 12%;
+}
+
+
+/* Responsif Mobile */
+@media screen and (max-width: 768px) {
+    .section{
+        min-height: calc(100dvh - 56px); /* Kurangi tinggi navbar */
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .card-new{
+        width: 400px;
+    }
+    .card-login {
+        border-radius: 1rem !important; /* lebih kecil di HP */
+        padding: 1.5rem !important;
+    }
+
+    .text-justify-sm {
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    .card-img-sm{
+        width: auto; 
+        max-width: 100%; 
+        height: auto;
+    }
+
+    .display-custom {
+        font-size: 10rem;
+    }
+}
+
+/* Animasi Dasar */
+.animate__fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate__fade-in.animate__active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 0.10s ease-in forwards;
+    font-family:     
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animasi khusus untuk box login */
+.box-area {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes slideFadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        /* animasi masuk dari kiri + sedikit naik */
+        transform: translateX(-100px) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes fillBar {
+    to { width: 100%; }
+}
+
+.block {
+    opacity: 0;
+    transform: translateX(-100px) translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.block.show {
+    opacity: 1;
+    transform: none;
+}
+
+.block-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+.block-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+    
